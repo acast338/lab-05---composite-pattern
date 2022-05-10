@@ -26,4 +26,12 @@ class NegSevenOpMock: public Base {
         virtual std::string stringify() { return "-7.5"; }
 };
 
+class ZeroOpMock: public Base {
+    public:
+        ZeroOpMock() { }
+
+        virtual double evaluate() { return 0; }
+        virtual std::string stringify() { return "0"; }
+};
+
 #endif //__OP_HPP__

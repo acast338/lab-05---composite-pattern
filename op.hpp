@@ -18,4 +18,12 @@ class SevenOpMock: public Base {
         virtual std::string stringify() { return "7.5"; }
 };
 
+class NegSevenOpMock: public Base {
+    public:
+        NegSevenOpMock() { }
+
+        virtual double evaluate() { return -7.5; }
+        virtual std::string stringify() { return "-7.5"; }
+};
+
 #endif //__OP_HPP__

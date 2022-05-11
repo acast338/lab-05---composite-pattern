@@ -4,34 +4,39 @@
 #include "base.hpp"
 
 class Op : public Base {
-    public:
-        Op(double value) : Base() { }
-        virtual double evaluate() { return 0.0; }
-        virtual std::string stringify() { return ""; }
+  private:
+    double value;
+
+  public:
+    Op(double value) : Base() { 
+        this->value = value;
+    }
+    virtual double evaluate() { return value; }
+    virtual std::string stringify() { return ""; }
 };
 
 class SevenOpMock: public Base {
-    public:
-        SevenOpMock() { }
+  public:
+    SevenOpMock() { }
 
-        virtual double evaluate() { return 7.5; }
-        virtual std::string stringify() { return "7.5"; }
+    virtual double evaluate() { return 7.5; }
+    virtual std::string stringify() { return "7.5"; }
 };
 
 class NegSevenOpMock: public Base {
-    public:
-        NegSevenOpMock() { }
+  public:
+    NegSevenOpMock() { }
 
-        virtual double evaluate() { return -7.5; }
-        virtual std::string stringify() { return "-7.5"; }
+    virtual double evaluate() { return -7.5; }
+    virtual std::string stringify() { return "-7.5"; }
 };
 
 class ZeroOpMock: public Base {
-    public:
-        ZeroOpMock() { }
+  public:
+    ZeroOpMock() { }
 
-        virtual double evaluate() { return 0; }
-        virtual std::string stringify() { return "0"; }
+    virtual double evaluate() { return 0; }
+    virtual std::string stringify() { return "0"; }
 };
 
 #endif //__OP_HPP__

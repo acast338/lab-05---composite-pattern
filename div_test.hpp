@@ -15,7 +15,7 @@ TEST(DivTest, DivStringify){
    Base *twelve = new Op(12);
    Base* four = new Op(4);
    Base* div = new Div(twelve,four);
-   EXPECT_EQ(div->stringify(), "(12.0*/4.0)");
+   EXPECT_EQ(div->stringify(), "(12.0/4.0)");
 }
 TEST(DivTest, SingleNegEvaluate){
    Base *twelve = new Op(12);

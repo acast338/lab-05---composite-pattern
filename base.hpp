@@ -9,9 +9,8 @@ class Base {
     Base() { }
 
     virtual ~Base() {}
-  
+
     /* Pure Virtual Functions */
-    //virtual void add(Base* base) = 0;
     virtual double evaluate() = 0;
     virtual std::string stringify() = 0;
 };

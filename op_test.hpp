@@ -21,14 +21,12 @@ TEST(OpMockTest, OpEvaluateNegSeven) {
     NegSevenOpMock* test = new NegSevenOpMock();
     EXPECT_EQ(test->evaluate(), -7.5);
     EXPECT_EQ(test->stringify(), "-7.5");
-
 }
 
 TEST(OpMockTest, OpEvaluateZero) {
     ZeroOpMock* test = new ZeroOpMock();
     EXPECT_EQ(test->evaluate(), 0);
     EXPECT_EQ(test->stringify(), "0");
-
 }
 
 #endif //__OP_TEST_HPP__

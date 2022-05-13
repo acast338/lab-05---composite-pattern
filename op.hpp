@@ -10,11 +10,8 @@ class Op : public Base {
     double val;
     string str;
 
-  protected:
-    vector<Base*> children;
-
   public:
-    Op(double val) : Base() { 
+    Op(double val) : Base() {
         this->val = val;
         this->str = to_string(val);
         this->str.erase(str.find_last_not_of('0'), string::npos);
@@ -24,7 +21,9 @@ class Op : public Base {
         delete temp;
     }
     virtual double evaluate() { return val; }
-    virtual string stringify() { return str; }
+    virtual string stringify() {
+        return str; 
+    }
 };
 
 class SevenOpMock: public Base {

@@ -14,7 +14,7 @@ class Op : public Base {
     Op(double val) : Base() {
         this->val = val;
         this->str = to_string(val);
-        this->str.erase(str.find_last_not_of('0'), string::npos);
+        this->str.erase(str.find_last_not_of('0')+2, string::npos);
     }
     ~Op() {
         Op* temp = this;
@@ -49,8 +49,8 @@ class ZeroOpMock: public Base {
     ZeroOpMock() { }
 
     virtual void add(Base*) {}
-    virtual double evaluate() { return 0; }
-    virtual string stringify() { return "0"; }
+    virtual double evaluate() { return 0.0; }
+    virtual string stringify() { return "0.0"; }
 };
 
 #endif //__OP_HPP__

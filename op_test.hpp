@@ -8,7 +8,7 @@
 TEST(OpTest, OpEvaluateNonZero) {
     Op* test = new Op(8);
     EXPECT_EQ(test->evaluate(), 8);
-    EXPECT_EQ(test->stringify(), "8");
+    EXPECT_EQ(test->stringify(), "8.0");
 }
 
 TEST(OpMockTest, OpEvaluateSeven) {
@@ -25,8 +25,8 @@ TEST(OpMockTest, OpEvaluateNegSeven) {
 
 TEST(OpMockTest, OpEvaluateZero) {
     ZeroOpMock* test = new ZeroOpMock();
-    EXPECT_EQ(test->evaluate(), 0);
-    EXPECT_EQ(test->stringify(), "0");
+    EXPECT_EQ(test->evaluate(), 0.0);
+    EXPECT_EQ(test->stringify(), "0.0");
 }
 
 #endif //__OP_TEST_HPP__

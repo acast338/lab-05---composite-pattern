@@ -17,6 +17,7 @@ class Op : public Base {
     Op(double val) : Base() { 
         this->val = val;
         this->str = to_string(val);
+        this->str.erase(str.find_last_not_of('0'), string::npos);
     }
     ~Op() {
         Op* temp = this;

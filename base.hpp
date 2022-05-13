@@ -4,15 +4,16 @@
 #include <string>
 
 class Base {
-    public:
-        /* Constructors */
-        Base() { }
+  public:
+    /* Constructors */
+    Base() { }
 
-        virtual ~Base() {}
-    
-        /* Pure Virtual Functions */
-        virtual double evaluate() = 0;
-        virtual std::string stringify() = 0;
+    virtual ~Base() {}
+  
+    /* Pure Virtual Functions */
+    //virtual void add(Base* base) = 0;
+    virtual double evaluate() = 0;
+    virtual std::string stringify() = 0;
 };
 
 #endif //__BASE_HPP__

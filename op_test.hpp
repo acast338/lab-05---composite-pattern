@@ -8,6 +8,7 @@
 TEST(OpTest, OpEvaluateNonZero) {
     Op* test = new Op(8);
     EXPECT_EQ(test->evaluate(), 8);
+    EXPECT_EQ(test->stringify(), "8");
 }
 
 TEST(OpMockTest, OpEvaluateSeven) {
